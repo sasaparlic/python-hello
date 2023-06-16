@@ -20,7 +20,7 @@
 #    server.serve_forever()
 from flask import Flask, request, Response
 
-app = Flask(VchatBOT)
+app = Flask(__name__)
 
 @app.route('/incoming', methods=['POST'])
 def incoming():
